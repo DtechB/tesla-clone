@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
+
 import "../App.css";
 import ButtonGroup from "./ButtonGroup";
 import ItemText from "./ItemText";
@@ -10,9 +12,13 @@ function Section({ title, desc, imageUrl, leftBtn, rightBtn }) {
       className="section d-flex flex-column justify-content-between"
       style={{ backgroundImage: `url("/images/${imageUrl}")` }}
     >
-      <ItemText title={title} desc={desc} />
+      <Fade bottom>
+        <ItemText title={title} desc={desc} />
+      </Fade>
       <Footer>
-        <ButtonGroup leftBtn={leftBtn} rightBtn={rightBtn} />
+        <Fade bottom>
+          <ButtonGroup leftBtn={leftBtn} rightBtn={rightBtn} />
+        </Fade>
         <DownArrow src="/images/down-arrow.svg" alt="" />
       </Footer>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function HambergerMenu() {
+function HambergerMenu({ onPress }) {
   return (
     <div className="HambergerMenu">
       <div className="d-xl-flex d-none">
@@ -12,9 +12,13 @@ function HambergerMenu() {
           Account
         </NavLink>
       </div>
-      <NavLink to="/models" className="link">
+      <div
+        onClick={() => onPress(true)}
+        className="link menuHam"
+        style={{ cursor: "pointer" }}
+      >
         Menu
-      </NavLink>
+      </div>
     </div>
   );
 }
