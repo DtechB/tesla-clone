@@ -5,10 +5,10 @@ function HambergerMenu({ onPress }) {
   return (
     <div className="HambergerMenu">
       <div className="d-xl-flex d-none">
-        <NavLink to="/models" className="link">
+        <NavLink to="/shop" className="link">
           Shop
         </NavLink>
-        <NavLink to="/models" className="link">
+        <NavLink to="/account" className="link">
           Account
         </NavLink>
       </div>

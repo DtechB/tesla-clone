@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/models" element={<ModelS />} />
+        <Route path="/:title" element={<ModelS />} />
       </Routes>
     </div>
   );

@@ -3,46 +3,50 @@ import { NavLink } from "react-router-dom";
 import { X } from "react-bootstrap-icons";
 import Styled from "styled-components";
 
-function MenuModal({ onPress }) {
+function MenuModal({ onPress, show }) {
+  const showing = {
+    transform: `${show ? "translateX(0)" : "translateX(100%)"}`,
+  };
+
   return (
-    <div className="MenuModal">
+    <div className="MenuModal" style={showing}>
       <CloseBtn>
         <X color="black" size={30} onClick={() => onPress(false)} />
       </CloseBtn>
-      <NavLink to="/models" className="link">
+      <NavLink to="/existing-inventory" className="link">
         Existing Inventory
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/used-inventory" className="link">
         Used Inventory
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/trade-in" className="link">
         Trade-In
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/test-drive" className="link">
         Test Drive
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/cybertruck" className="link">
         Cybertruck
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/roadster" className="link">
         Roadster
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/semi" className="link">
         Semi
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/charging" className="link">
         Charging
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/powerwall" className="link">
         Powerwall
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/commerical-energy" className="link">
         Commerical Energy
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/utilities" className="link">
         Utilities
       </NavLink>
-      <NavLink to="/models" className="link">
+      <NavLink to="/find-us" className="link">
         Find us
       </NavLink>
     </div>

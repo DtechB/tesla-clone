@@ -11,7 +11,7 @@ function Header() {
       <Logo />
       <Menu />
       <HambergerMenu onPress={setMenuShow} />
-      {menuShow && <MenuModal onPress={setMenuShow} show={menuShow} />}
+      <MenuModal onPress={setMenuShow} show={menuShow} />
     </div>
   );
 }
