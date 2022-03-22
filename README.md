@@ -2,6 +2,8 @@
 
 ![](model3.png)
 
+## Click 👉 [demo](https://dtechb-tesla-clone.netlify.app/)
+
 
 # Getting Started with Create React App
 
